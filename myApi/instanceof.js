@@ -13,6 +13,4 @@ function myInstanceof(leftValue, rightValue) {
         leftValue = leftValue.__proto__;
     }
 }
-// console.log(myInstanceof(()=>{}, Object));// true
-console.log(myInstanceof('', String));// true
-
+console.log(myInstanceof({}, Object));
