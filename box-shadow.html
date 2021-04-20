@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #text {
+      font-size: 50px;
+      /* x y轴 右下为正 */
+      /* text-shadow: -10px 10px 1px rgb(189, 38, 38); */
+       /* 0 0  为4周阴影  第三个参数为模糊度 */
+      text-shadow: 0px 0px 5px rgb(189, 38, 38);
+
+      color: #000;
+    }
+    /* x轴 y轴 模糊度  延申的宽度 颜色  inset(内置颜色)*/
+    #div1{
+      height: 100px;
+      width: 100px;
+      margin: 100px auto;
+      background-color: teal;
+      box-shadow: 0px 0px 5px  10px  red  inset  ;
+    }
+  </style>
+</head>
+
+<body>
+  <span id="text">这是test</span>
+  <div id="div1"></div>
+</body>
+
+</html>

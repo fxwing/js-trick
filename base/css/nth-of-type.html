@@ -1,0 +1,22 @@
+<div>
+  <div>这段不参与计数。</div>
+  <p>这是第一段。</p>
+  <p>这是第二段。</p>
+  <div>这段不参与计数。</div>
+  <p>这是第三段。</p>
+  <p>这是第四段。</p>
+</div>
+
+<style>
+  /* 触发都为本元素  不涉及到父元素 */
+
+  /* p元素的第一个 */
+  div>p:nth-of-type(1) {
+    font-weight: bold;
+  }
+
+  /* 当前兄弟元素第几个 元素而且还是本元素 */
+  div>p:nth-child(3) {
+    color: royalblue;
+  }
+</style>

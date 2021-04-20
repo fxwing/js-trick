@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 颜色浅的时候不可以 */
+    :root {
+      --bg-color: rgba(109, 115, 126, .3);
+      --border-color: rgba(109, 115, 126, 0.4);
+      --red-color: red;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .module {
+      margin: 30px auto;
+      width: 300px;
+      height: 200px;
+      background-color: var(--bg-color);
+      position: relative;
+    }
+
+    .module::before {
+      content: '';
+      height: 30px;
+      width: 30px;
+      transform: rotate(45deg);
+      background-color: var(--red-color);
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      z-index: -1;
+    }
+
+
+    .module1 {
+      margin: 30px auto;
+      width: 300px;
+      height: 200px;
+      border: 1px solid var(--border-color);
+      position: relative;
+      background-color: #fff;
+    }
+
+    .module1::before {
+      content: ' ';
+      height: 30px;
+      width: 30px;
+      transform: rotate(45deg);
+      border: 1px solid var(--border-color);
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      border-bottom: none;
+      border-right: none;
+      background-color: #fff;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="module"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="module1"></div>
+  </div>
+
+</body>
+
+</html>

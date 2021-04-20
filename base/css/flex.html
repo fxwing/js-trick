@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      border: 1px  solid  red;
+      width: 250px;
+      height: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      /* align-content: space-around; */
+      /* 单行时使用 */
+      /* align-items: stretch; */
+      /* justify-content: stretch; */
+      /* align-content: space-around; */
+      /* justify-content: space-around; */
+    }
+    span{
+      width: 100px;
+      /* height: 50px; */
+      margin:  0 10px;
+      /* margin: 0 auto; */
+      border: 1px  solid  blue;
+      flex-grow: 1;
+
+      /* background-color: rgb(165, 76, 128); */
+    }
+    div>span:nth-of-type(2){
+      /* 单行时使用 */
+      /* align-self: flex-end; */
+    }
+    div>span:nth-child(3){
+      /* margin-right: auto！; */
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+  </div>
+</body>
+
+</html>
