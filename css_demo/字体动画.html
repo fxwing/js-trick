@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --bg-color: cornflowerblue;
+      --text-color: rgb(41, 19, 23);
+      --active-color: rgb(26, 223, 102);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Times New Roman', Times, serif;
+      background-color: var(--bg-color);
+    }
+
+    div {
+      font-size: 14vw;
+      color: var(--bg-color);
+      position: relative;
+      -webkit-text-stroke: 0.3vw var(--text-color);
+      text-transform: uppercase;
+    }
+
+    div::before {
+      content: attr(data-text);
+      position: absolute;
+      height: 100%;
+      left: 0;
+      top: 0;
+      width: 0;
+      /* border-right: 1px solid var(--active-color); */
+      overflow: hidden;
+      -webkit-text-stroke: 0vw var(--text-color);
+      animation: animate 2s linear infinite;
+      color: var(--active-color);
+    }
+
+    @keyframes animate {
+
+      0%,
+      10%,
+      100% {
+        width: 0;
+      }
+
+      70%,
+      90% {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div data-text="fxwing">fxwing</div>
+</body>
+
+</html>
